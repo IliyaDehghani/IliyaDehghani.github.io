@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iliya Dehghani — Personal Blog</title>
+  <meta name="description" content="A minimal, modern one-page personal blog and portfolio." />
+  <style>
+    :root { --bg:#ffffff; --fg:#0b0b0f; --muted:#6b7280; --border:#e5e7eb; --card:#ffffff; --accent:#3b82f6; --radius:16px; --shadow:0 8px 30px rgba(0,0,0,.06); --maxw:1100px; }
+    @media (prefers-color-scheme: dark){ 
+      :root{ --bg:#0b0b0f; --fg:#e5e7eb; --muted:#9aa0aa; --border:#1f2937; --card:#0f1115; --shadow:0 8px 30px rgba(0,0,0,.4);} 
+    }
+    html,body { height:100% }
+
+    body {
+      margin:0;
+      font-family:ui-sans-serif,-apple-system,Segoe UI,Roboto,Inter,"Helvetica Neue",Arial,"Noto Sans";
+      background: var(--bg);
+      color:var(--fg);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px clamp(16px,3vw,32px)}
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:color-mix(in oklab, var(--bg) 85%, transparent);border-bottom:1px solid var(--border);z-index:10}
+    .brand{display:flex;align-items:baseline;gap:12px;padding:8px 0}
+    .brand h1{margin:0;font-size:clamp(22px,3vw,32px)} .brand .tag{color:var(--muted);font-size:14px}
+    nav{display:flex;gap:18px;margin-top:6px;flex-wrap:wrap} nav a{color:var(--muted);font-weight:500} nav a:hover{color:var(--fg)}
+    .hero{padding:clamp(32px,8vw,72px) 0 24px;display:grid;gap:12px}
+    .hero h2{margin:0;font-size:clamp(26px,4.8vw,44px);line-height:1.15} .hero p{margin:0;color:var(--muted);max-width:70ch}
+    section{padding:36px 0}
+    .section-title{font-size:clamp(18px,2.6vw,22px);margin:0 0 14px 0}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px clamp(16px,3vw,22px);box-shadow:var(--shadow);transition:transform .2s ease, box-shadow .2s ease}
+    .card:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+    .work-grid{display:grid;grid-template-columns:1fr;gap:20px}
+    @media(min-width:900px){.work-grid{grid-template-columns:1fr 1fr}}
+    .list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+    .list .item{padding:14px;border:1px dashed var(--border);border-radius:12px;display:grid;gap:6px}
+    .contact{display:grid;gap:8px}
+    .contact .cta{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;border:1px solid var(--border);background:color-mix(in oklab, var(--card) 92%, transparent);box-shadow:var(--shadow);font-weight:600}
+    .contact .cta:hover{transform:translateY(-1px);box-shadow:0 10px 34px rgba(0,0,0,.08)}
+    .muted{color:var(--muted)} .spacer{height:18px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <h1>Iliya Dehghani</h1>
+        <span class="tag">Personal Blog & Portfolio</span>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Labs & Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h2>Exploring Technology, Security, and Innovation</h2>
+      <p>Welcome to my corner of the internet. This is where I document hands-on lab work, share detailed analysis, and showcase cybersecurity projects.</p>
+    </section>
+
+    <section id="about">
+      <h3 class="section-title">About Me</h3>
+      <div class="card">
+        <p>I am a cybersecurity student with hands-on experience in penetration testing, threat detection, digital forensics, and secure system design. My background includes conducting OS and web application penetration tests, building centralized monitoring pipelines, investigating breaches using forensic tools, hardening systems to industry benchmarks, and deploying complex virtualized environments. I also develop automation scripts in Python and Bash, and leverage Ansible for efficient system provisioning and configuration management.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h3 class="section-title">Experience</h3>
+      <div class="card">
+        <ul class="list" aria-label="Technical experience">
+          <li class="item">Conducted OS and web application penetration testing using industry-standard tools (Kali Linux, Burp Suite, Metasploit); identified vulnerabilities aligned with OWASP Top 10.</li>
+          <li class="item">Built a centralized monitoring pipeline using Wazuh, Splunk, and log analytics to detect suspicious activity, generate alerts, and perform threat correlation.</li>
+          <li class="item">Investigated simulated breaches using Autopsy; recovered forensic artifacts, built timelines, and documented findings following incident response procedures.</li>
+          <li class="item">Performed OS hardening on Linux systems using CIS Benchmarks and custom scripts to reduce attack surface and improve security posture.</li>
+          <li class="item">Deployed a virtualized lab using Proxmox, Sophos Firewall, and Docker to simulate enterprise environments; implemented remote access, VLANs, and traffic segmentation.</li>
+          <li class="item">Leveraged Python and Bash to develop automation scripts for system monitoring, log parsing, and security task orchestration.</li>
+          <li class="item">Automated system provisioning and configuration management using Ansible, improving consistency and efficiency.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="work">
+      <h3 class="section-title">Work</h3>
+      <div class="work-grid">
+        <div class="card">
+          <h4>Lab Writeups</h4>
+          <ul class="list">
+            <li class="item">
+              <strong>The NIST CFReDS Hacking Case</strong>
+              <span class="muted">The objective of this lab is to examine user activity, recover deleted data, identify signs of malicious behavior, and extract evidence relevant to a cybercrime investigation.</span>
+              <a href="lab-writeups/lab1.pdf" target="_blank">Read PDF →</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Project Showcase</h4>
+          <ul class="list">
+            <li class="item">
+              <strong>SearX Search Engine</strong>
+              <span class="muted">In Development</span>
+              <a href="#">View project →</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3 class="section-title">Contact</h3>
+      <div class="card contact">
+        <a class="cta" href="mailto:Iliya.dgh@pm.me">📧 Email: Iliya.dgh@pm.me</a>
+        <a class="cta" href="https://www.linkedin.com/in/iliya-dehghani" target="_blank" rel="noopener">🔗 LinkedIn: /in/iliya-dehghani</a>
+      </div>
+    </section>
+
+    <div class="spacer"></div>
+  </main>
+
+  <footer class="wrap">
+    <hr style="border:none;border-top:1px solid var(--border)" />
+    <p class="muted" style="font-size:14px;">© <span id="y"></span> Iliya Dehghani. All rights reserved.</p>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
